@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Rabi-Ribi Data-Base</title>
+</head>
+
+<body>
+  <br>一部、独自に調査したものが含まれておりますが、主な情報源は以下の二つです。
+  <br>
+  <a href="https://github.com/wcko87/rabiribi-map-editing/tree/master/docs">rabiribi-map-editing(詳細な解説付き)</a> 及び、
+  <a href="https://github.com/NuclearCheese/rabiribi_editor/blob/master/RabiRibi_Editor/Data%20Files/event_ids.txt">rabiribi_editorのデータ</a>
+  <br>*必要に応じてソートしてください。表のヘッダーをクリックするとソートされます。
+  <div id="users">
+    <input class="search" placeholder="Search" />
+    <table id="list" border="1">
+      <thead>
+        <tr>
+          <th class="sort" data-sort="id">Id</th>
+          <th class="sort" data-sort="type">Type</th>
+          <th class="sort" data-sort="name">Name</th>
+          <th class="sort" data-sort="detail">Detail</th>
+        </tr>
+      </thead>
+      <tbody class="list" id="listid">
+      </tbody>
+    </table>
+  </div>
+  <script src="./data.js"></script>
+  <script src="./page.js"></script>
+  <script src="./list.min.js"></script>
+  <script>
+    var options = {
+      valueNames: ['id', 'type', 'name', 'detail']
+    };
+    var userList = new List('users', options);
+  </script>
+  <style>
+      .sort.desc:after {
+        content:"▼";
+      }
+      .sort.asc:after {
+        content:"▲";
+      }
+      </style>
+</body>
+
+</html>
