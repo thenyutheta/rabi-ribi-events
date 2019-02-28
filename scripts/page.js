@@ -1,6 +1,6 @@
 
 function DataSet(data_array) {
-  data_array.sort(function(para, parb){ return parseInt(para.split("&&")[0]) - parseInt(parb.split("&&")[0]); });
+  data_array.sort(function (para, parb) { return parseInt(para.split("&&")[0]) - parseInt(parb.split("&&")[0]); });
   var list_elm = document.getElementById("listid");
   for (var i in data_array) {
     var temp = data_array[i].split("&&");
